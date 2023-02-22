@@ -1,0 +1,438 @@
+<?xml version="1.0" ?>
+<robot name="pguin" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find pguin_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find pguin_description)/urdf/pguin.trans" />
+<xacro:include filename="$(find pguin_description)/urdf/pguin.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0018364831356047012 0.00017651104964880673 0.6032172976873532" rpy="0 0 0"/>
+    <mass value="0.2"/>
+    <inertia ixx="0.001424" iyy="0.003857" izz="0.005273" ixy="-2e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_Hip_Joint_1">
+  <inertial>
+    <origin xyz="-0.024906436199168287 0.005774140785141436 -0.021430165788386857" rpy="0 0 0"/>
+    <mass value="0.13224884273497764"/>
+    <inertia ixx="3e-05" iyy="6.2e-05" izz="4.9e-05" ixy="1e-06" iyz="4e-06" ixz="-4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.026981 0.009401 -0.590042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Hip_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.026981 0.009401 -0.590042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Hip_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_Hip_Joint_1">
+  <inertial>
+    <origin xyz="-0.024906436199168575 0.005774140785142075 -0.021430165788386524" rpy="0 0 0"/>
+    <mass value="0.13224884273497764"/>
+    <inertia ixx="3e-05" iyy="6.2e-05" izz="4.9e-05" ixy="1e-06" iyz="4e-06" ixz="-4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.073019 0.009401 -0.590042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Hip_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.073019 0.009401 -0.590042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Hip_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_Knee_Joint_1">
+  <inertial>
+    <origin xyz="-0.024906185284594987 -0.00382404744459576 -0.0218630519733764" rpy="0 0 0"/>
+    <mass value="0.13224884273497764"/>
+    <inertia ixx="3e-05" iyy="6.2e-05" izz="4.8e-05" ixy="-1e-06" iyz="-2e-06" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.026147 -0.055367 -0.348578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Knee_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.026147 -0.055367 -0.348578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Knee_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_Knee_Joint_1">
+  <inertial>
+    <origin xyz="-0.024906185284594935 -0.0038240474445950454 -0.021863051973376624" rpy="0 0 0"/>
+    <mass value="0.13224884273497764"/>
+    <inertia ixx="3e-05" iyy="6.2e-05" izz="4.8e-05" ixy="-1e-06" iyz="-2e-06" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.073853 -0.055367 -0.348578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Knee_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.073853 -0.055367 -0.348578" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Knee_Joint_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_Hip_1">
+  <inertial>
+    <origin xyz="0.0055051444518334006 -0.03525548137224349 -0.010968289531952502" rpy="0 0 0"/>
+    <mass value="0.3382131060287256"/>
+    <inertia ixx="0.000106" iyy="4.7e-05" izz="0.000123" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.058481 -0.035699 -0.600042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.058481 -0.035699 -0.600042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_Hip_1">
+  <inertial>
+    <origin xyz="0.005505144451833151 -0.03525548137224287 -0.010968289531952391" rpy="0 0 0"/>
+    <mass value="0.3382131060287256"/>
+    <inertia ixx="0.000106" iyy="4.7e-05" izz="0.000123" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.041519 -0.035699 -0.600042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.041519 -0.035699 -0.600042" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_Knee_1">
+  <inertial>
+    <origin xyz="0.01152506716567727 0.013392757231262632 -0.011871621769302454" rpy="0 0 0"/>
+    <mass value="0.39488164057587066"/>
+    <inertia ixx="0.000142" iyy="6.6e-05" izz="0.000147" ixy="0.0" iyz="-2.3e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.063883 -0.051201 -0.364026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Knee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.063883 -0.051201 -0.364026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Knee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_Knee_1">
+  <inertial>
+    <origin xyz="0.011525067165677264 0.013392757231263382 -0.011871621769302731" rpy="0 0 0"/>
+    <mass value="0.39488164057587066"/>
+    <inertia ixx="0.000142" iyy="6.6e-05" izz="0.000147" ixy="0.0" iyz="-2.3e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.036117 -0.051201 -0.364026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Knee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.036117 -0.051201 -0.364026" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Knee_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_Calve_1">
+  <inertial>
+    <origin xyz="0.010319582234751781 0.027995365616378696 -0.10440348943748701" rpy="0 0 0"/>
+    <mass value="0.5963863095211966"/>
+    <inertia ixx="0.002281" iyy="0.002195" izz="0.000263" ixy="-0.0" iyz="0.000558" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.063811 0.001317 -0.560115" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Calve_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.063811 0.001317 -0.560115" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Calve_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_Calve_1">
+  <inertial>
+    <origin xyz="0.010319582234752385 0.027995365616379442 -0.10440348943748701" rpy="0 0 0"/>
+    <mass value="0.5963863095211965"/>
+    <inertia ixx="0.002281" iyy="0.002195" izz="0.000263" ixy="-0.0" iyz="0.000558" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.036189 0.001317 -0.560115" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Calve_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.036189 0.001317 -0.560115" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Calve_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_Thigh_1">
+  <inertial>
+    <origin xyz="0.010274296374107449 -0.02078061248727975 -0.14623337605984496" rpy="0 0 0"/>
+    <mass value="0.87606134894097"/>
+    <inertia ixx="0.006587" iyy="0.005821" izz="0.001035" ixy="-2e-06" iyz="-0.000335" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.062977 -0.050046 -0.318038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.062977 -0.050046 -0.318038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Right_Thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_Thigh_1">
+  <inertial>
+    <origin xyz="0.010321394852051573 -0.020776990506645415 -0.14623401471275493" rpy="0 0 0"/>
+    <mass value="0.8760613489409663"/>
+    <inertia ixx="0.006587" iyy="0.005821" izz="0.001035" ixy="-1e-06" iyz="-0.000334" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.037023 -0.050046 -0.318038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.037023 -0.050046 -0.318038" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pguin_description/meshes/Left_Thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute20" type="revolute">
+  <dynamics damping="1" friction="0.5"/>
+  <origin xyz="0.0315 -0.0451 -0.01" rpy="0 0 0"/>
+  <parent link="Right_Hip_1"/>
+  <child link="Right_Hip_Joint_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.22173" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute26" type="revolute">
+  <dynamics damping="1" friction="0.5"/>
+  <origin xyz="0.0315 -0.0451 -0.01" rpy="0 0 0"/>
+  <parent link="Left_Hip_1"/>
+  <child link="Left_Hip_Joint_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.22173" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute32" type="revolute">
+  <dynamics damping="1" friction="0.5"/>
+  <origin xyz="0.037736 0.004166 -0.015448" rpy="0 0 0"/>
+  <parent link="Right_Knee_1"/>
+  <child link="Right_Knee_Joint_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.22173" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute33" type="revolute">
+  <dynamics damping="1" friction="0.5"/>
+  <origin xyz="0.037736 0.004166 -0.015448" rpy="0 0 0"/>
+  <parent link="Left_Knee_1"/>
+  <child link="Left_Knee_Joint_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="1.22173" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid36" type="fixed">
+  <origin xyz="-0.058481 0.035699 0.600042" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Right_Hip_1"/>
+</joint>
+
+<joint name="Rigid37" type="fixed">
+  <origin xyz="0.041519 0.035699 0.600042" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Left_Hip_1"/>
+</joint>
+
+<joint name="Rigid38" type="fixed">
+  <origin xyz="-7.2e-05 0.052518 -0.196089" rpy="0 0 0"/>
+  <parent link="Right_Calve_1"/>
+  <child link="Right_Knee_1"/>
+</joint>
+
+<joint name="Rigid39" type="fixed">
+  <origin xyz="-7.2e-05 0.052518 -0.196089" rpy="0 0 0"/>
+  <parent link="Left_Calve_1"/>
+  <child link="Left_Knee_1"/>
+</joint>
+
+<joint name="Rigid40" type="fixed">
+  <origin xyz="-0.03683 0.008084 -0.029927" rpy="0 0 0"/>
+  <parent link="Right_Hip_Joint_1"/>
+  <child link="Right_Calve_1"/>
+</joint>
+
+<joint name="Rigid41" type="fixed">
+  <origin xyz="-0.03683 0.008084 -0.029927" rpy="0 0 0"/>
+  <parent link="Left_Hip_Joint_1"/>
+  <child link="Left_Calve_1"/>
+</joint>
+
+<joint name="Rigid 42" type="fixed">
+  <origin xyz="-0.03683 -0.005321 -0.03054" rpy="0 0 0"/>
+  <parent link="Right_Knee_Joint_1"/>
+  <child link="Right_Thigh_1"/>
+</joint>
+
+<joint name="Rigid 43" type="fixed">
+  <origin xyz="-0.03683 -0.005321 -0.03054" rpy="0 0 0"/>
+  <parent link="Left_Knee_Joint_1"/>
+  <child link="Left_Thigh_1"/>
+</joint>
+
+ <link name="my_link">
+   <inertial>
+     <origin xyz="0 0 0.5" rpy="0 0 0"/>
+     <mass value="1.5"/>
+     <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+   </inertial>
+
+   <visual>
+     <origin xyz="0 0 0" rpy="0 0 0" />
+     <geometry>
+       <box size="0.05 0.05 0.025" />
+     </geometry>
+     <material name="Cyan">
+       <color rgba="0 1.0 1.0 1.0"/>
+     </material>
+   </visual>
+
+   <collision>
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+     <geometry>
+       <box size="0.05 0.05 0.025" />
+     </geometry>
+   </collision>
+ </link>
+
+
+<joint name="Slide01" type="prismatic">
+  <dynamics damping="1" friction="0.5"/>
+  <origin xyz="0 0 0.625" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="my_link"/>
+  <limit lower="-2" higher="2" effort="100" velocity="2" />
+</joint>
+
+<!--
+<link name="Weight">
+  <inertial>
+    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+    <mass value="1.0"/>
+    <inertia ixx="0.001424" iyy="0.003857" izz="0.005273" ixy="-2e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.2 0.2 0.2" />
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.2 0.2 0.2" />
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Slide01" type="prismatic">
+  <origin xyz="0 0 0.02" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Weight"/>
+</joint>
+-->
+
+<!--
+<link name="world"/>
+
+<joint name="world_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint>
+-->
+
+</robot>
